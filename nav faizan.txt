@@ -1,0 +1,59 @@
+import { Button } from '@material-ui/core';
+import React from 'react'
+import {Navbar, Nav} from 'react-bootstrap';
+// import {motion} from 'framer-motion';
+import {Link} from 'react-router-dom';
+import DrawersTab from './DrawersTab';
+
+function Navi() {
+
+    // const x = useMotionValue(0);
+    // const opacity = useTransform (x, [-200,0,200], [0,1,0]);
+    return (
+        <div className="sign__up"
+        >
+
+            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+                <Link to="/">
+                    <Navbar.Brand href="#home">F&D</Navbar.Brand>
+                </Link>
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                <Navbar.Collapse id="responsive-navbar-nav">
+               
+                    <Nav className="tabs">
+                    <Link to="/patient" style={{textDecoration:'none'}}>
+                        <Nav className="tab1">
+                        {/* <DrawersTab/>  */}
+                        </Nav>
+                    </Link>
+
+                        {/* <div className="line"></div> */}
+
+                    <Link to="/patient" style={{textDecoration:'none'}}>
+                        <Nav className="tab2">
+                                <Button>BACK</Button>         {/* Syringe Pump */}
+                        </Nav>
+                    </Link>
+
+                        
+                    
+                    
+
+                    </Nav>
+                </Navbar.Collapse>
+            </Navbar>
+
+            {/* <motion.div className="drag"
+                    drag
+                    dragConstraints={{ top:0, right: 0, bottom: 400, left: 0 }}
+                    dragTransition={{ bounceStiffness: 600, bounceDamping: 20 }}
+                    dragElastic={0.5}
+            >
+
+            </motion.div> */}
+
+        </div>
+    )
+}
+
+export default Navi
